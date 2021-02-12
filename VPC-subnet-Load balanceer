@@ -1,0 +1,48 @@
+AWS | VPC| Subnet| EC2 | Auto Scaling | Load Balancer
+
+A: VPC
+  -Subnet
+  - Route table
+ - Internet Gateway
+ 
+B: EC2
+ - 2 x EC2 machine
+  - Install IIS
+  - Take Snapshot
+
+Load Balancing 
+-Deploy Load Balancer
+
+Autoscaling
+
+SNS - Simple Notification system : will send notification to email or phone
+
+with every VPC that is created following 3 things are auto created
+- Pvt Route Table
+- Network ACL list
+- Secuirty Grooup
+Keypair is hardware encryption with hardware to server 
+
+Subnet --> RT ---> IGW
+========
+A: 1: create VPC : cloudhc
+create subnet: sns-east2a
+creats subnet : sns-east2b
+2: After creating both subnets, create route Table
+ -create 2 RT , 1 public and 1 prvt and associate with VPC
+3: associate pubic subnet with publich RT and pvt subnet with pvt RT
+
+4: create IGW and attached to VPC
+5: Come back to Pubic RT . Edit route and define any route"0.0.0.0" and attached IGW
+  - It will identify if public subnet idenentfi Internet gateway
+  
+  
+  =======
+  B: Now deploy Ec2 machine and perform autoscaling
+  Create Pvt Ec2 instance with Windows server 2016 base and RDT , HTPP with anywhere 
+  Create Public Ec2 instance with Windows server 2016 base and RDT , HTPP with anywhere 
+  
+  Download  remote Desktop file , 
+  Get password
+O3NdYOGy3qb(gy*NzdxYAeMo%VWB!Y Auto-Password
+YGoaPzGB@-ttEnu4cSIvCayNVuBtAuSp - jump-password
