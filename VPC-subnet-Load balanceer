@@ -42,7 +42,12 @@ creats subnet : sns-east2b
   Create Pvt Ec2 instance with Windows server 2016 base and RDT , HTPP with anywhere 
   Create Public Ec2 instance with Windows server 2016 base and RDT , HTPP with anywhere 
   
-  Download  remote Desktop file , 
+  Download  remote Desktop file and login with Jumpbox machine to give connectivity to Autoscaling machine . Make sure Secuorty groupd associated with Autoscaling 
+  has RDP port enabled on Port 3389 
   Get password
-O3NdYOGy3qb(gy*NzdxYAeMo%VWB!Y Auto-Password
+i)O3NdYOGy3qb(gy*NzdxYAeMo%VWB!Y Auto-Password
+i)O3NdYOGy3qb(gy*NzdxYAeMo%VWB!Y
 YGoaPzGB@-ttEnu4cSIvCayNVuBtAuSp - jump-password
+
+Once connected to Remote Desktop using Jump-pwd
+Copy pvt IP , open remote desktop , and run mstcs and define pvt ip there
