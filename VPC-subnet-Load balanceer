@@ -7,8 +7,8 @@ A: VPC
  
 B: EC2
  - 2 x EC2 machine
-  - Install IIS
-  - Take Snapshot
+  -  1  x EC2 machine Pvt , will Install IIS and attached load balancer
+  - 1  x EC2 machine on public
 
 Load Balancing 
 -Deploy Load Balancer
@@ -51,3 +51,8 @@ YGoaPzGB@-ttEnu4cSIvCayNVuBtAuSp - jump-password
 
 Once connected to Remote Desktop using Jump-pwd
 Copy pvt IP , open remote desktop , and run mstcs and define pvt ip there
+
+#Installing IIS
+Go to Rmote desktop server --> Server manager --> local server --: IE enahnaced secuorty confirg and swith off Admin and user off 
+
+type 10.0.1.86 to check if IIS is working --> Add jumpserver IP to check if IIS is working fine
