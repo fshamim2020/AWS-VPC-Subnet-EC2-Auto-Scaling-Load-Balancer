@@ -56,3 +56,20 @@ Copy pvt IP , open remote desktop , and run mstcs and define pvt ip there
 Go to Rmote desktop server --> Server manager --> local server --: IE enahnaced secuorty confirg and swith off Admin and user off 
 
 type 10.0.1.86 to check if IIS is working --> Add jumpserver IP to check if IIS is working fine
+Now take snapshot and perform Auto-scaling . This is done due to the fact if 1 machine gets terminates then other machine workds fine
+In order to take image , stop prvt machine 1st . IIS is made on Pvt , jump box is public
+As soon as the Pvt machine stops , take its image also 
+Image is used to backup , in case of website is down ,image isued 
+Create snapshot , it will create by default of 30G
+Once done  , create a pvt subnet in 2a and associate to Pvt route table
+Create load balancer , classic load balancer  and assign HTTPs
+Load balanceer is attached to public
+define a secuirty group for load balancer
+Load balancer create end points , but DNS name will not work until any machine gets attached to it 
+Now create a launch configuration , selec image auto-scaling under AMI , select t2.micro
+Once launce configuration is created with key 
+check secutity group of launch configuration whether it has HTTP TCP under Inbound rule
+Now go Autoscaling Group and create with existing configuration and select Pvt Subnet 
+Create Autoscaling Group 
+Create Target group and attached 3 sg-machines to it 
+3 machines are attached to load balancer and try DNS 
